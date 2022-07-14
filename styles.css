@@ -12,3 +12,200 @@ body {
     overflow: hidden;
 }
 /***********************************************************/
+/******************* Animation Classes *********************/
+.aniBaseboard {
+    bottom: 100vh;
+    animation-name: aniBaseboard;
+    animation-duration: 500ms;
+}
+
+.aniStreetPole {
+    animation-name: aniStreetPole;
+    animation-duration: 600ms;
+}
+
+.aniStreetSignNewGame {
+    animation-name: aniStreetSignNewGame;
+    animation-duration: 700ms;
+    transform-origin: right;
+}
+
+.aniStreetSignLoadGame {
+    animation-name: aniStreetSignLoadGame;
+    animation-duration: 700ms;
+    transform-origin: right;
+}
+
+.aniStreetSignExit {
+    animation-name: aniStreetSignExit;
+    animation-duration: 700ms;
+    transform-origin: right;
+}
+
+.aniMaria {
+    animation-name: aniMaria;
+    animation-duration: 1000ms;
+}
+
+.aniGila {
+    animation-name: aniGila;
+    animation-duration: 1000ms;
+}
+
+.aniMelissa {
+    animation-name: aniMelissa;
+    animation-duration: 1000ms;
+}
+/***********************************************************/
+/*********************** Animation *************************/
+@keyframes aniBaseboard {
+    0% {
+        bottom: -100vh;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes aniStreetPole {
+    0% {
+        top: 100vh;
+    }
+
+    100% {
+        top: 22vh;
+    }
+}
+
+@keyframes aniStreetSignNewGame {
+    0% {
+        top: 100vh;
+        transform: rotate(-135deg);
+    }
+
+    100% {
+        top: 45vh;
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes aniStreetSignLoadGame {
+    0% {
+        top: 100vh;
+        transform: rotate(-135deg);
+    }
+
+    100% {
+        top: 53vh;
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes aniStreetSignExit {
+    0% {
+        top: 100vh;
+        transform: rotate(-135deg);
+    }
+
+    100% {
+        top: 60vh;
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes aniMaria {
+    0% {
+        top: 100vh;
+    }
+
+    100% {
+        top: 45vh;
+    }
+}
+
+@keyframes aniGila {
+    0% {
+        top: 100vh;
+    }
+
+    100% {
+        top: 40vh;
+    }
+}
+
+@keyframes aniMelissa {
+    0% {
+        top: 100vh;
+    }
+
+    100% {
+        top: 55vh;
+    }
+}
+/***********************************************************/
+/************************** Menu ***************************/
+#imgBackground { 
+    position: absolute;
+    z-index: -1;
+}
+
+#imgBaseboard {
+    position: absolute;
+    width: 200vh;
+    height: 20vh;
+    z-index: 5;
+    bottom: 0;
+}
+
+#imgStreetPole {
+    position: absolute;
+    width: 20vh;
+    height: 70vh;
+    left: 143vh;
+    top: 22vh;
+    z-index: 4;
+}
+
+#imgStreetSignExit, #imgStreetSignLoadGame, #imgStreetSignNewGame {
+    position: absolute;
+    width: 20vh;
+    height: 8vh;
+    left: 128vh;
+    top: 45vh;
+    z-index: 3;
+}
+
+#imgStreetSignLoadGame {
+    top: 53vh;
+}
+
+#imgStreetSignExit {
+    top: 60vh;
+}
+
+#imgMaria, #imgGila, #imgMelissa {
+    width: 28vh;
+    height: 50vh;
+    position: absolute;
+    left: 50vh;
+    top: 45vh;
+    z-index: 0;
+}
+
+#imgGila {
+    width: 28vh;
+    height: 55vh;
+    top: 40vh;
+    left: 13vh;
+    z-index: 1;
+}
+
+#imgMelissa {
+    width: 28vh;
+    height: 40vh;
+    top: 55vh;
+    left: 33vh;
+    z-index: 2;
+}
+/***********************************************************/

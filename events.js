@@ -9,21 +9,18 @@ window.addEventListener('load', function () {
             setFade(true);
             getPremadeContainer();
             
-            // TEMP
 
         } else if (this.location.hostname != '') {
             alert('Unrecognized host.');
         } else {
 
-            setCookies();
-            startBattle();
+            setFade(true);
+            getPremadeContainer(0);
         }
     } else {
         parseCookies();
-
-        // TODO: Check if the player would still be alive
-        
-        startBattle();
+        setFade(true);
+        getPremadeContainer(0);
     } 
 
     

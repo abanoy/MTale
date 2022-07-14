@@ -106,7 +106,107 @@ function addCookies(strName, strValue) {
 function getPremadeContainer(intSelection) {
 	switch (intSelection) {
 		case 0: // Main
-            
+			setElement(document.body, 'img', 'imgBackground', 'image/png', 'img/menu/background.png', '', false, true);
+            setElement(document.body, 'img', 'imgBaseboard', 'image/png', 'img/menu/baseboard.png', 'aniBaseboard', false, true);
+			setElement(document.body, 'img', 'imgStreetPole', 'image/png', 'img/menu/streetPole.png', '', false, true);
+			setElement(document.body, 'img', 'imgStreetSignExit', 'image/png', 'img/menu/streetSignExit.png', '', false, true);
+			setElement(document.body, 'img', 'imgStreetSignLoadGame', 'image/png', 'img/menu/streetSignLoadGame.png', '', false, true);
+			setElement(document.body, 'img', 'imgStreetSignNewGame', 'image/png', 'img/menu/streetSignNewGame.png', '', false, true);
+			setElement(document.body, 'img', 'imgMaria', 'image/png', 'img/menu/maria.png', '', false, true);
+			setElement(document.body, 'img', 'imgGila', 'image/png', 'img/menu/gila.png', '', false, true);
+			setElement(document.body, 'img', 'imgMelissa', 'image/png', 'img/menu/melissa.png', '', false, true);
+			
+			imgStreetSignExit.onclick = function () {
+				location.href = 'https://abanoy.github.io/';
+			};
+
+			imgStreetSignLoadGame.onclick = function () {
+				// If there are cookies present, load them
+				if (document.cookie != '') {
+					alert("TODO: Parse Cookies");
+				} else {
+					alert("No save file detected.");
+				}
+			}
+
+			imgStreetSignNewGame.onclick = function () {
+				// If there are cookies present, alert them of overwrite
+				if (document.cookie != '') {
+					alert("TODO: Alert of overwritting it")
+				} else {
+					alert("TODO: Start new game.");
+				}
+			}
+
+			// Animation Sequence -
+			// 0ms-50ms 	[50ms]: 	aniBaseboard
+			// 50ms-130ms 	[80ms]: 	aniStreetPole
+			// 130ms-200ms	[70ms]: 	aniStreetSignNewGame
+			// 200ms-270ms	[70ms]: 	aniStreetSignLoadGame
+			// 270ms-340ms	[70ms]: 	aniStreetSignExit
+			// 450ms-510ms	[60ms]: 	aniMaria
+			// 510ms-570ms	[60ms]: 	aniGila
+			// 570ms-630ms	[60ms]: 	aniMelissa
+
+			imgStreetPole.style.top = "100vh";
+			imgStreetSignNewGame.style.top = "100vh";
+			imgStreetSignLoadGame.style.top = "100vh";
+			imgStreetSignExit.style.top = "100vh";
+			imgMaria.style.top = "100vh";
+			imgGila.style.top = "100vh";
+			imgMelissa.style.top = "100vh";
+
+			setTimeout( function () {
+				imgStreetPole.classList.add('aniStreetPole');
+			}, 50);
+
+			setTimeout( function () {
+				imgStreetPole.style.top = "22vh";
+				imgStreetSignNewGame.classList.add('aniStreetSignNewGame');
+			}, 130);
+
+			setTimeout( function () {
+				imgStreetSignNewGame.style.top = "45vh";
+				imgStreetSignLoadGame.classList.add('aniStreetSignLoadGame');
+			}, 200);
+
+			setTimeout( function () {
+				imgStreetSignLoadGame.style.top = "53vh";
+				imgStreetSignExit.classList.add('aniStreetSignExit');
+			}, 270);
+
+			setTimeout( function () {
+				imgStreetSignExit.style.top = "60vh";
+				imgMaria.classList.add('aniMaria');
+			}, 450);
+
+			setTimeout( function () {
+				imgMaria.style.top = "45vh";
+				imgGila.classList.add('aniGila');
+			}, 510);
+
+			setTimeout( function () {
+				imgGila.style.top = "40vh";
+				imgMelissa.classList.add('aniMelissa');
+			}, 570);
+
+			setTimeout( function () {
+				imgBackground.classList = "";
+				imgStreetPole.classList = "";
+				imgStreetSignNewGame.classList = "";
+				imgStreetSignLoadGame.classList = "";
+				imgStreetSignExit.classList = "";
+				imgMaria.classList = "";
+				imgGila.classList = "";
+				imgGila.classList = "";
+				imgMelissa.classList = "";
+
+				
+				
+				
+				imgMelissa.style.top = "55vh";
+			}, 1500);
+
             break;
 		default: // First time prompt
 			setElement(document.body, 'div', 'cntFirstTimePopup', '', '', '', false, false);
