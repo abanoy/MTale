@@ -1,0 +1,14 @@
+/************************* Global **************************/
+* {
+    margin: auto;
+    padding: 0;
+    font-size: 20px;
+    font-family: Lucida Sans;
+}
+
+body {
+    background-color: black;
+    margin: 0;
+    overflow: hidden;
+}
+/***********************************************************/
