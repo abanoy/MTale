@@ -157,40 +157,43 @@ function getPremadeContainer(intSelection) {
 			imgMelissa.style.top = "100vh";
 
 			setTimeout( function () {
-				imgStreetPole.classList.add('aniStreetPole');
-			}, 50);
-
-			setTimeout( function () {
-				imgStreetPole.style.top = "22vh";
-				imgStreetSignNewGame.classList.add('aniStreetSignNewGame');
-			}, 130);
-
-			setTimeout( function () {
-				imgStreetSignNewGame.style.top = "45vh";
-				imgStreetSignLoadGame.classList.add('aniStreetSignLoadGame');
-			}, 200);
-
-			setTimeout( function () {
-				imgStreetSignLoadGame.style.top = "53vh";
-				imgStreetSignExit.classList.add('aniStreetSignExit');
-			}, 270);
-
-			setTimeout( function () {
-				imgStreetSignExit.style.top = "60vh";
 				imgMaria.classList.add('aniMaria');
-			}, 450);
+			}, 200);
 
 			setTimeout( function () {
 				imgMaria.style.top = "45vh";
 				imgGila.classList.add('aniGila');
-			}, 510);
+			}, 260);
 
 			setTimeout( function () {
 				imgGila.style.top = "40vh";
 				imgMelissa.classList.add('aniMelissa');
-			}, 570);
+			}, 380);
 
 			setTimeout( function () {
+				imgMelissa.style.top = "55vh";
+				imgStreetPole.classList.add('aniStreetPole');
+			}, 1000);
+
+			setTimeout( function () {
+				imgStreetPole.style.top = "22vh";
+				imgStreetSignNewGame.classList.add('aniStreetSignNewGame');
+			}, 1080);
+
+			setTimeout( function () {
+				imgStreetSignNewGame.style.top = "45vh";
+				imgStreetSignLoadGame.classList.add('aniStreetSignLoadGame');
+			}, 1150);
+
+			setTimeout( function () {
+				imgStreetSignLoadGame.style.top = "53vh";
+				imgStreetSignExit.classList.add('aniStreetSignExit');
+			}, 1220);
+
+
+
+			setTimeout( function () {
+				imgStreetSignExit.style.top = "60vh";
 				imgBackground.classList = "";
 				imgStreetPole.classList = "";
 				imgStreetSignNewGame.classList = "";
@@ -205,7 +208,7 @@ function getPremadeContainer(intSelection) {
 				
 				
 				imgMelissa.style.top = "55vh";
-			}, 1500);
+			}, 1920);
 
             break;
 		default: // First time prompt
