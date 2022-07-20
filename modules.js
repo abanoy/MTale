@@ -103,6 +103,25 @@ function addCookies(strName, strValue) {
 	}
 }
 
+function getPremadeCSS(intSelection, elmHTML) {
+	// The purpose of this function is for elements
+	// that changes dynamically in which it has
+	// different size dimensions.
+
+	// In this case, images like characters on
+	// different body expressions would be the primary
+	// reason.
+
+	switch (intSelection) {
+		case 0: // img/dialogue/maria01horror.png
+			elmHTML.style.width = "100vh";
+			elmHTML.style.height = "222vh";
+			elmHTML.style.top = "7vh";
+			elmHTML.style.left = "4vh";
+			break;
+	}
+}
+
 function getPremadeContainer(intSelection) {
 	switch (intSelection) {
 		case 0: // Main
@@ -211,6 +230,23 @@ function getPremadeContainer(intSelection) {
 			}, 1920);
 
             break;
+		case 1: // Generic conversation prompt
+			// Create a new container that presents brief information about the project
+			setElement(document.body, 'img', 'imgConversationSpeaker', 'image/png', "img/dialogue/maria01Horror.png", 'fade-out', false, true);
+			setElement(document.body, 'div', 'cntConversation', '', '', 'fade-out', false, false);
+			setElement(cntConversation, 'div', 'cntConversationText', '', '', '', false, false);
+			setElement(cntConversationText, 'div', 'lblConversationText', '', 'Quite the concept I see.', '', true, false);
+			setElement(cntConversation, 'div', 'lblConversationSpeaker', '', 'Maria:', '', true, false);
+			
+			
+
+			getPremadeCSS(0, imgConversationSpeaker);
+
+			setTimeout(function () {cntConversation.classList = "";
+									imgConversationSpeaker.classList = "";
+									}, 500);
+
+			break;
 		default: // First time prompt
 			setElement(document.body, 'div', 'cntFirstTimePopup', '', '', '', false, false);
 			setElement(cntFirstTimePopup, 'label', 'lblHeader', '', 'INFORMATION', 'label', true, false);
